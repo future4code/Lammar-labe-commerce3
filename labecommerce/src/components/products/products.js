@@ -1,10 +1,24 @@
-import React from "react";
+import React, {useState} from "react";
 import { CardContainer} from "./StyledProducts";
+import products from "../../data/MockDeDados"
 
+export function Card() {
+  const [search, setSearch] = useState ('');
 
-export function Card(props) {
     return <CardContainer>
-      <h2>TEST</h2>
-      <p>Alou</p>
+      <input 
+      placeholder="search" 
+      onChange={(ev) => setSearch(ev.target.value)} 
+      value={search}>
+      </input>
+
+      {/* .filter((products) => products.startsWith(search)) */}
+      {products.map((value) => {
+        return (
+          <div>
+            <p>{value.name}</p>
+          </div>
+        )
+      })}
     </CardContainer>
- }
+}
