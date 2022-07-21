@@ -1,24 +1,29 @@
-import React, {useState} from "react";
-import { CardContainer} from "./StyledProducts";
-import products from "../../data/MockDeDados"
+import React from "react";
+import { CardContainer, CardName, CardPrice, CardImage} from "./StyledProducts";
 
-export function Card() {
-  const [search, setSearch] = useState ('');
+function Card(props) {
+  // const [search, setSearch] = useState ('');
+ 
 
-    return <CardContainer>
-      <input 
-      placeholder="search" 
-      onChange={(ev) => setSearch(ev.target.value)} 
-      value={search}>
-      </input>
+      // <input 
+      // placeholder="search" 
+      // onChange={(ev) => setSearch(ev.target.value)}
+      // value={search}>
+      // </input>
+    return <CardContainer> 
+              <CardName>
+        {props.produto.name}
+        </CardName>
+        <CardImage>
+        {props.produto.image}
+        </CardImage>       
 
-      {/* .filter((products) => products.startsWith(search)) */}
-      {products.map((value) => {
-        return (
-          <div>
-            <p>{value.name}</p>
-          </div>
-        )
-      })}
+         <CardPrice>
+        {props.produto.price}
+         </CardPrice> 
+         <button>Adicionar ao carrinho</button>
     </CardContainer>
+      
 }
+
+export default Card;
