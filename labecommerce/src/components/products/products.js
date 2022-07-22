@@ -2,14 +2,7 @@ import React from "react";
 import { CardContainer, CardName, CardPrice, CardImage} from "./StyledProducts";
 
 function Card(props) {
-  // const [search, setSearch] = useState ('');
- 
-
-      // <input 
-      // placeholder="search" 
-      // onChange={(ev) => setSearch(ev.target.value)}
-      // value={search}>
-      // </input>
+  
     return <CardContainer> 
               <CardName>
         {props.produto.name}
@@ -19,7 +12,7 @@ function Card(props) {
         </CardImage>       
 
          <CardPrice>
-        {props.produto.price}
+         ₿ {props.produto.price}
          </CardPrice> 
          <button>Adicionar ao carrinho</button>
     </CardContainer>

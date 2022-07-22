@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const HeaderContainer = styled.header`
+ const HeaderContainer = styled.header`
 background-color:grey;
 display: flex;
 align-items: center;
@@ -8,3 +8,4 @@ justify-content: center;
 img{
 width: 300px;
 }`
+export default HeaderContainer;
