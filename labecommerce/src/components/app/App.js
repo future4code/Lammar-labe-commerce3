@@ -1,18 +1,18 @@
 import React, { useState } from "react";
-import Header from '../header/Header';
-import Card from '../products/Products'; 
-import Apps from "../app/AppStyled";
-import Filters from "../filter/Filter";
+import Header from '../header/Index';
+import Card from '../products/Index'; 
+import Apps from "./Styled";
+import Filters from "../filter/Index";
 import productsList from "../../data/MockDeDados";
 
-function App() {
+function App({ handleClick }) {
   const [products] = useState(productsList)
   const [query, setQuery] = useState("")
   const [minPrice, setMinPrice] = useState(-Infinity)
   const [maxPrice, setMaxPrice] = useState(Infinity)
   const [sortingParameter, setSortingParameter] = useState("name")
   const [order, setOrder] = useState("asc")
-
+  
   return <>
   
     <Header/>
@@ -57,9 +57,9 @@ function App() {
         }
       })
       .map(produto => {
-        return <Card key={produto.id} produto={produto}/>
+        return <Card key={produto.id} produto={produto} handleClick={handleClick}/>
 })}
     </Apps>
-    </>
+  </>
 }
 export default App;

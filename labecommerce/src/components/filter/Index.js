@@ -1,4 +1,4 @@
-import {InputSearch, FiltersContainer} from "../filter/StyledFilter";
+import {InputSearch, FiltersContainer, SelectSearch, SelectOrder} from "../filter/Styled";
 
 function Filters(props) {
 
@@ -25,24 +25,24 @@ function Filters(props) {
 
       <span>
         <label htmlFo="sortingParameter">Ordenar por: </label>
-        <select
+        <SelectSearch
           name="sortingParameter"
           value={props.sortingParameter}
           onChange={(ev) => props.setSortingParameter(ev.target.value)}
         >
           <option value="">Título</option>
           <option value="price">Preço</option>
-        </select>
+        </SelectSearch>
       </span>
 
-      <select
+      <SelectOrder
         value={props.order}
         onChange={(ev) => props.setOrder(ev.target.value)}
       >
         <option value={"asc"}>Crescente</option>
         <option value={"desc"}>Decrescente</option>
-      </select>
-    </FiltersContainer>
-  
+      </SelectOrder>
+
+    </FiltersContainer> 
 }
 export default Filters;

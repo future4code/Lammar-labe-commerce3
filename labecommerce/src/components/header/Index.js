@@ -1,4 +1,4 @@
-import  HeaderContainer  from './StyledHeader';
+import  HeaderContainer  from './Styled';
 import logo from "../../img/labecommerce-logo.png";
 import React from 'react';
 

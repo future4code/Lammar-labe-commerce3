@@ -1,5 +1,5 @@
 import React from "react";
-import { CardContainer, CardName, CardPrice, CardImage} from "./StyledProducts";
+import { CardContainer, ButtonCart, CardName, CardPrice, CardImage} from "./Styled";
 
 function Card (props) {
   
@@ -16,7 +16,7 @@ function Card (props) {
          ₿ {props.produto.price}
          </CardPrice> 
 
-         <button>Adicionar ao carrinho</button>
+         <ButtonCart>Adicionar ao carrinho</ButtonCart>
     </CardContainer>
       
 }
