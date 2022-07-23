@@ -2,22 +2,21 @@ import styled from "styled-components"
 
 
 export const CardContainer = styled.div`
-   background-color: gray;
-   justify-content:center;
-   margin: 5px;
-   padding: 0 10px;
-   border-radius: 5px;
+   color: black;
+   font-size: 10px;
+   text-align: center;
+   margin: 20px;
+   padding: 10px;
+   border-radius: 10px;
    width: 250px;
    flex-wrap:wrap;
+   border: 3px solid whitesmoke;
+   box-shadow: 5px 5px 5px lightgray;
 `
 export const CardName = styled.h2`
-   margin: 5px;
-   padding: 0 15px;
   width: 250px;
 `
-export const CardPrice = styled.p`
-   margin: 5px;
-   padding: 0 15px; 
+export const CardPrice = styled.h2`
    width: 250px;  
 `
 
