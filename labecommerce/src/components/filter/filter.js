@@ -1,21 +1,22 @@
-import FiltersContainer from "./StyledFilter";
+import {InputSearch, FiltersContainer} from "../filter/StyledFilter";
 
-export function Filters(props) {
+function Filters(props) {
+
   return <FiltersContainer>
-      <input
-        placeholder="Pesquisa"
+      <InputSearch
+        placeholder="Pesquisar"
         value={props.query}
         onChange={(ev) => props.setQuery(ev.target.value)}
       />
 
-      <input
+      <InputSearch
         type="number"
         placeholder="Preço mínimo"
         value={props.minPrice}
         onChange={(ev) => props.setMinPrice(ev.target.value)}
       />
 
-      <input
+      <InputSearch
         type="number"
         placeholder="Preço máximo"
         value={props.maxPrice}

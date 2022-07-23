@@ -1,19 +1,13 @@
-import React, {useState} from "react";
-import './App.css';
-import  Header from './components/header/Header';
-import  Card  from './components/products/Products'; 
-import productsList from "../src/data/MockDeDados";
-import styled from "styled-components";
-import  Filters  from "./components/filter/Filter";
-
- const Apps = styled.div`
-   display: flex;
-   flex-wrap:wrap;
-`
+import React, { useState } from "react";
+import Header from '../header/Header';
+import Card from '../products/Products'; 
+import Apps from "../app/AppStyled";
+import Filters from "../filter/Filter";
+import productsList from "../../data/MockDeDados";
 
 function App() {
-const [products] = useState(productsList);
-const [query, setQuery] = useState("")
+  const [products] = useState(productsList)
+  const [query, setQuery] = useState("")
   const [minPrice, setMinPrice] = useState(-Infinity)
   const [maxPrice, setMaxPrice] = useState(Infinity)
   const [sortingParameter, setSortingParameter] = useState("name")
@@ -21,9 +15,9 @@ const [query, setQuery] = useState("")
 
   return <>
   
-      <Header/>
+    <Header/>
       
-    <Filters>
+    <Filters
     query={query}
     minPrice={minPrice}
     maxPrice={maxPrice}
@@ -34,11 +28,12 @@ const [query, setQuery] = useState("")
     setMaxPrice={setMaxPrice}
     setSortingParameter={setSortingParameter}
     setOrder={setOrder}
-    </Filters>
+    />
+
     <Apps>
       {products
       .filter(produto => {
-        return produto.name.includes(query)
+        return produto.name.toLocaleLowerCase().includes(query.toLocaleLowerCase())
       })
       .filter(produto => {
         return produto.price >= minPrice || minPrice === ""
@@ -62,11 +57,9 @@ const [query, setQuery] = useState("")
         }
       })
       .map(produto => {
-        return <Card key={produto.name} produto={produto}/>
+        return <Card key={produto.id} produto={produto}/>
 })}
     </Apps>
     </>
-      
-  
 }
 export default App;
