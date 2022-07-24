@@ -27,6 +27,6 @@
   6. Componetização
   
 
-  <p> Trabalho realizado por Guilherme Brasão, Leandro Lima e Victor Motta.
+  <p> Trabalho realizado por Guilherme Brazão, Leandro Lima e Victor Motta.
   
   <p> P.S Estamos em andamento com a funcionalidade de um carrinho para adicionar ou remover os itens criados.<p>
