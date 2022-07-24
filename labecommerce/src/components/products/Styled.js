@@ -25,3 +25,18 @@ display: flex;
 width: 50px;
    .img{width: 50px;} 
 `
+export const ButtonCart = styled.button`
+   font-size: 15px;
+   text-align: center;
+   border: 0;
+   border-radius: 15px;
+   padding: 5px 25px;
+   color: white;
+   background: linear-gradient(90deg, #002e61, #b527cf);
+   cursor: pointer;
+   overflow: hidden;
+:hover{
+   background: linear-gradient(90deg, #b527cf, #002e61);
+   transition: 0.4s;
+}
+`
