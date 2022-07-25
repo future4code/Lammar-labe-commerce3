@@ -28,5 +28,6 @@
   
 
   <p> Trabalho realizado por Guilherme Brazão, Leandro Lima e Victor Motta.
+  <p> Segue nosso link do Surge: http://frequent-mint.surge.sh<p>
   
   <p> P.S Estamos em andamento com a funcionalidade de um carrinho para adicionar ou remover os itens criados.<p>
